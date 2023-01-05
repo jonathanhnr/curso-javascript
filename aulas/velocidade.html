@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h1>velocidade do carro</h1>
+<h2>limite de velocidade 60km
+</h2>
+
+<input type="number" name="vel" id="vel">
+<input type="button" value="multado?" onclick=multa()>
+<div id="velocidade">
+    resposta
+</div>
+
+<script>
+    function multa() {
+        var vel = document.getElementById('vel')
+        var velo = Number(vel.value)
+        var velocidade = document.getElementById('velocidade')
+        velocidade.innerHTML = `<p> sua velocidede é de ${velo}</p>`
+        if(velo > 60){
+            velocidade.innerHTML += `<p>sua velocidade excedeu o limite ${velo}, multadooooo</p>`
+        }
+        velocidade.innerHTML += `<p>use sempre cinto de segurança </p>`
+
+
+
+    }
+
+</script>
+</body>
+</html>
